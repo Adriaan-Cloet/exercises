@@ -1,3 +1,6 @@
+# inheritance is om geen dubbele dingen in de code te moeten schrijven
+
+
 class Human:
     def __init__(self, name):
         self.__name = name
