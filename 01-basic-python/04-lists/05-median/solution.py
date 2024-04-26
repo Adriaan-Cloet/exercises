@@ -6,3 +6,4 @@ def median(ns):
         return (sorted_ns[i - 1] + sorted_ns[i]) / 2
     else:
         return sorted_ns[i]
+    
