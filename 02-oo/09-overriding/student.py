@@ -25,19 +25,25 @@ class ShoppingList:
             raise ValueError()
         self.__items.append(item)
 
+
 class Item:
     def __init__(self, name, price):
         self.name = name
         self.price = price
 
     def can_be_sold_to(self, customer):
-        return True
-    
+        return True  # een gewoon item kunnen alle customers kopen dus het gaat altijd true meegeven
+
 
 class AgeRestrictedItem(Item):
     def can_be_sold_to(self, customer):
-        return customer.age >= 18
-    
+        return (
+            customer.age >= 18
+        )  # gaat alleen true returnen als de leeftijd 18 of ouder is
+
+
 class CountryRestrictedItem(Item):
     def can_be_sold_to(self, customer):
-        return customer.country != 'Arstotzka'
+        return (
+            customer.country != "Arstotzka"
+        )  # gaat alleen true geven als het land niet Arstotzka is
